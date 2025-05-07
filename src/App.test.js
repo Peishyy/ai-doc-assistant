@@ -1,8 +1,18 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { DocumentProvider } from './context/DocumentContext';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock('./utils/fileUtils', () => ({
+  extractText: jest.fn(() => Promise.resolve('Mock extracted text'))
+}));
+
+
+test('renders AI Document Assistant heading', () => {
+  render(
+    <DocumentProvider>
+      <App />
+    </DocumentProvider>
+  );
+  const heading = screen.getByText(/AI Document Assistant/i);
+  expect(heading).toBeInTheDocument();
 });
