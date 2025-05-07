@@ -1,1 +1,1 @@
-// React context for global document state
+// Context API to manage text and suggestions

@@ -1,1 +1,1 @@
-// React component for uploading documents
+// UploadComponent handles .txt, .pdf, .docx parsing

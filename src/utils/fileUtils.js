@@ -1,1 +1,1 @@
-// File parsing utilities (PDF/DOCX)
+// Utility for parsing txt, pdf, and docx files

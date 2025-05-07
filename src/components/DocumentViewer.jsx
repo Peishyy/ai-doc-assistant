@@ -1,1 +1,1 @@
-// Component to render parsed text with suggestions
+// Displays original and improved text side by side
